@@ -31,6 +31,227 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Desktop Styles */
+        :root {
+            --primary: #2124B1;
+            --secondary: #4777F5;
+            --light: #F7FAFF;
+            --dark: #1D1D27;
+        }
+
+        /* General Styles */
+        body {
+            background: #FFFFFF;
+            overflow-x: hidden;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+        }
+
+        /* Header & Navigation */
+        .navbar .navbar-nav .nav-link {
+            padding: 15px 15px;
+            color: var(--dark);
+            font-weight: 500;
+            outline: none;
+        }
+
+        .navbar .navbar-nav .nav-link:hover,
+        .navbar .navbar-nav .nav-link.active {
+            color: var(--primary);
+        }
+
+        /* Mobile Carousel Controls */
+        @media (max-width: 767.98px) {
+            .header-carousel .owl-nav {
+                display: none;
+            }
+
+            .header-carousel .owl-dots {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .header-carousel .owl-dot {
+                width: 10px;
+                height: 10px;
+                margin: 0 5px;
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: 50%;
+            }
+
+            .header-carousel .owl-dot.active {
+                background: var(--primary);
+            }
+        }
+
+        /* About Section */
+        .about-img {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-img::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url(../img/bg-about.png) top right no-repeat;
+            background-size: contain;
+        }
+
+        /* Services */
+        .service-item {
+            transition: .5s;
+        }
+
+        .service-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-item .service-img {
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+        }
+
+        .footer .footer-item a {
+            color: var(--light);
+            padding: 5px 0;
+        }
+
+        .footer .footer-item a:hover {
+            color: var(--primary);
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 991.98px) {
+
+            /* Navbar */
+            .navbar-brand h1 {
+                font-size: 1.2rem;
+            }
+
+            .navbar-nav {
+                background: #fff;
+                padding: 1rem;
+            }
+
+            /* Carousel */
+            .header-carousel-item img {
+                height: 400px !important;
+            }
+
+            .carousel-caption h1 {
+                font-size: 2rem !important;
+            }
+
+            .carousel-caption p {
+                font-size: 1rem !important;
+            }
+
+            /* About Section */
+            .about-img {
+                margin-bottom: 2rem;
+            }
+
+            .counter-value {
+                font-size: 1.5rem !important;
+            }
+
+            /* Facilities */
+            .service-item {
+                margin-bottom: 1.5rem;
+            }
+
+            .service-content .h4 {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+
+            /* Header */
+            .navbar-brand img {
+                height: 30px;
+                width: 30px;
+            }
+
+            /* Footer */
+            .footer-item {
+                text-align: center;
+                margin-bottom: 1.5rem;
+            }
+
+            /* General Spacing */
+            .py-5 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+
+            .container {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+            }
+
+            /* Stats Container */
+            .row.g-4.text-center {
+                flex-direction: column;
+            }
+
+            .col-sm-4 {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+
+            /* Text Sizing */
+            .display-1 {
+                font-size: 2rem !important;
+            }
+
+            .display-4 {
+                font-size: 1.5rem !important;
+            }
+
+            /* Buttons */
+            .btn {
+                padding: 0.5rem 1.5rem !important;
+                font-size: 0.9rem !important;
+            }
+
+            /* Images */
+            .about-img img {
+                max-height: 300px;
+                object-fit: cover;
+            }
+
+            /* Navigation */
+            .navbar-brand h1 {
+                font-size: 1rem;
+            }
+
+            /* Events Section */
+            .project-item {
+                margin: 0 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -174,8 +395,7 @@
                         <div class="col-sm-4">
                             <div class="bg-primary rounded p-4">
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value fs-1 fw-bold text-dark"
-                                        data-toggle="counter-up">3</span>
+                                    <span class="counter-value fs-1 fw-bold text-dark" data-toggle="counter-up">3</span>
                                     <h4 class="text-dark fs-1 mb-0" style="font-weight: 600; font-size: 25px;">k+</h4>
                                 </div>
                                 <div class="w-100 d-flex align-items-center justify-content-center">
