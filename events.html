@@ -31,6 +31,157 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Mobile-first styles */
+        @media (max-width: 768px) {
+
+            /* Header adjustments */
+            .navbar-brand h1 {
+                font-size: 1.2rem !important;
+                text-align: left;
+            }
+
+            .navbar-brand img {
+                height: 30px !important;
+                width: 30px !important;
+            }
+
+            /* Topbar modifications */
+            .topbar {
+                display: block !important;
+                padding: 10px;
+            }
+
+            .topbar .text-muted {
+                display: block;
+                margin: 5px 0;
+                font-size: 14px;
+            }
+
+            /* Header carousel adjustments */
+            .header-carousel-item-img img {
+                height: 300px !important;
+            }
+
+            .header-carousel-item .container {
+                padding: 0 15px;
+            }
+
+            .header-carousel-item h4 {
+                font-size: 1.8rem !important;
+            }
+
+            /* Project grid modifications */
+            .project-item {
+                margin-bottom: 15px;
+            }
+
+            .project-img img {
+                height: 200px !important;
+            }
+
+            /* Footer adjustments */
+            .footer-item {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .footer-item a {
+                margin: 5px 0;
+                display: block;
+            }
+
+            /* Navigation menu */
+            .navbar-collapse {
+                background-color: #fff;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .navbar-nav .nav-item {
+                margin: 5px 0;
+            }
+
+            .nav-link {
+                padding: 8px 15px !important;
+                border-radius: 4px;
+            }
+
+            /* Improve touch targets */
+            .btn,
+            .nav-link,
+            .footer-item a {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+
+            /* Spacing adjustments */
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .row {
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+
+            .col-lg-4,
+            .col-md-6 {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            /* Back to top button */
+            .back-to-top {
+                right: 15px;
+                bottom: 15px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        /* Additional optimizations for very small screens */
+        @media (max-width: 576px) {
+            .navbar-brand h1 {
+                font-size: 1rem !important;
+            }
+
+            .header-carousel-item h4 {
+                font-size: 1.5rem !important;
+            }
+
+            .project-img img {
+                height: 180px !important;
+            }
+
+            .footer {
+                text-align: center;
+            }
+
+            .copyright {
+                font-size: 14px;
+            }
+        }
+
+        /* Performance optimizations */
+        img {
+            will-change: transform;
+        }
+
+        .project-item {
+            contain: content;
+        }
+
+        /* Smooth scrolling for iOS */
+        @supports (-webkit-overflow-scrolling: touch) {
+            body {
+                -webkit-overflow-scrolling: touch;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -132,593 +283,686 @@
     </div>
     <!-- Header End -->
 
-    <!-- Project Section Start -->
-    <div class="container-fluid project pt-5">
+    <!-- Videos Section -->
+    <div class="row g-4 wow fadeInUp mb-5">
+        <!-- Video Gallery Section -->
         <div class="container pt-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
                 <h4 class="text-primary">Our Events</h4>
                 <h1 class="display-4">Explore Our Latest Events</h1>
             </div>
-            <div class="row g-4 wow fadeInUp">
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/e1.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/e2.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/e3.jpg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o12.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
+            <!-- Videos in single column -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <!-- Video 1 -->
+                    <div class="project-item mb-5">
                         <div class="project-img">
-                            <img src="solar/e5.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
+                            <video class="w-100 rounded" controls style="aspect-ratio: 16/9; object-fit: cover;">
+                                <source src="solar/video1.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/e6.jpg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/e7.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/e8.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/e9.jpg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/e10.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/m4.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/m3.jpg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/m5.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/m7.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/m6.jpg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o1.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o2.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o3.jpg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o4.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o5.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o6.jpg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o7.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o8.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o9.jpg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o10.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o11.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/o12.jpg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
+                    <!-- Video 2 -->
+                    <div class="project-item mb-5">
                         <div class="project-img">
-                            <img src="solar/2.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
+                            <video class="w-100 rounded" controls style="aspect-ratio: 16/9; object-fit: cover;">
+                                <source src="solar/video2.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
+
+                    <!-- Video 3 -->
+                    <div class="project-item mb-5">
                         <div class="project-img">
-                            <img src="solar/3.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
+                            <video class="w-100 rounded" controls style="aspect-ratio: 16/9; object-fit: cover;">
+                                <source src="solar/video3.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
+
+                    <!-- Video 4 -->
+                    <div class="project-item mb-5">
                         <div class="project-img">
-                            <img src="solar/4.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
+                            <video class="w-100 rounded" controls style="aspect-ratio: 16/9; object-fit: cover;">
+                                <source src="solar/video4.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
+
+                    <!-- Video 5 -->
+                    <div class="project-item mb-5">
                         <div class="project-img">
-                            <img src="solar/5.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/5.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/6.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/7.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/8.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/9.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/10.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/11.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/12.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/13.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/14.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/15.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/15.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/17.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/18.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/19.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/20.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/21.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/22.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/23.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/24.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/25.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/26.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/27.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/28.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/29.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/30.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/31.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/32.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/33.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/34.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/35.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
-                                style="object-fit: cover; height: 300px;">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-item h-100">
-                        <div class="project-img">
-                            <img src="solar/36.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
-                                style="object-fit: cover; height: 300px;">
+                            <video class="w-100 rounded" controls style="aspect-ratio: 16/9; object-fit: cover;">
+                                <source src="solar/video5.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Project Section End -->
 
-    <div class="spacer" style="height: 50px;"></div>
+        <style>
+            .project-item {
+                transition: transform 0.3s ease;
+            }
 
+            .project-item:hover {
+                transform: translateY(-5px);
+            }
 
-    <!-- Footer Start -->
-    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-        <div class="container py-5">
-            <div class="row g-5 justify-content-center">
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="footer-item d-flex flex-column align-items-center">
-                        <h4 class="text-white mb-4">Explore</h4>
-                        <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
-                        <a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>
-                        <a href="facilites.html"><i class="fas fa-angle-right me-2"></i> Our Facilities</a>
-                        <a href="events.html"><i class="fas fa-angle-right me-2"></i> Events</a>
-                        <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>
-                    </div>
+            .project-img {
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            @media (max-width: 768px) {
+                .project-item {
+                    margin-bottom: 2rem !important;
+                }
+            }
+        </style>
+        <div class="container-fluid project pt-5">
+            <div class="container pt-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                    <h4 class="text-primary">Our Events</h4>
+                    <h1 class="display-4">Explore Our Latest Events</h1>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="footer-item d-flex flex-column">
-                        <h4 class="text-white mb-4">Contact Info</h4>
-                        <a href="https://www.google.com/maps?q=Solar+School,Tindivanam,Villupuram"><i
-                                class="fa fa-map-marker-alt me-2"></i> Solar School,Tindivanam,Villupuram.</a>
-                        <a href="mailto:solarschool@gmail.com"><i class="fas fa-envelope me-2"></i>
-                            solarschool@gmail.com</a>
-                        <a href="tel:+01234567890"><i class="fas fa-phone me-2"></i> +012 345 67890</a>
+
+                <div class="row g-4 wow fadeInUp">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/e1.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/e2.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/e3.jpg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o12.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/e5.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/e6.jpg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/e7.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/e8.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/e9.jpg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/e10.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/m4.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/m3.jpg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/m5.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/m7.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/m6.jpg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o1.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o2.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o3.jpg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o4.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o5.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o6.jpg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o7.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o8.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o9.jpg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o10.jpg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o11.jpg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/o12.jpg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/2.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/3.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/4.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/5.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/5.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/6.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/7.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/8.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/9.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/10.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/11.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/12.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/13.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/14.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/15.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/15.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/17.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/18.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/19.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/20.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/21.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/22.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/23.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/24.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/25.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/26.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/27.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/28.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/29.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/30.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/31.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/32.jpeg" class="img-fluid w-100 rounded" alt="Independence Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/33.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/34.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/35.jpeg" class="img-fluid w-100 rounded" alt="Other Events"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="project-item h-100">
+                            <div class="project-img">
+                                <img src="solar/36.jpeg" class="img-fluid w-100 rounded" alt="Sports Day"
+                                    style="object-fit: cover; height: 300px;">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Footer End -->
+        <!-- Project Section End -->
 
-    <!-- Copyright Start -->
-    <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row g-4 align-items-center">
-                <div class="col-md-6 text-center text-md-start mb-md-0">
-                    <span class="text-body"><a href="#" class="border-bottom text-primary"><i
-                                class="fas fa-copyright text-light me-2"></i>SOLAR SCHOOL</a>, All right
-                        reserved.</span>
-                </div>
-                <div class="col-md-6 text-center text-md-end text-body">
-                    Designed By <a class="border-bottom text-primary" href="">DJSK TECH SOLUTIONS</a>
+        <div class="spacer" style="height: 50px;"></div>
 
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5 justify-content-center">
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column align-items-center">
+                            <h4 class="text-white mb-4">Explore</h4>
+                            <a href="index.html"><i class="fas fa-angle-right me-2"></i> Home</a>
+                            <a href="about.html"><i class="fas fa-angle-right me-2"></i> About
+                                Us</a>
+                            <a href="facilites.html"><i class="fas fa-angle-right me-2"></i> Our
+                                Facilities</a>
+                            <a href="events.html"><i class="fas fa-angle-right me-2"></i> Events</a>
+                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact
+                                Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Contact Info</h4>
+                            <a href="https://www.google.com/maps?q=Solar+School,Tindivanam,Villupuram"><i
+                                    class="fa fa-map-marker-alt me-2"></i> Solar
+                                School,Tindivanam,Villupuram.</a>
+                            <a href="mailto:solarschool@gmail.com"><i class="fas fa-envelope me-2"></i>
+                                solarschool@gmail.com</a>
+                            <a href="tel:+01234567890"><i class="fas fa-phone me-2"></i> +012 345
+                                67890</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Copyright End -->
+        <!-- Footer End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-body"><a href="#" class="border-bottom text-primary"><i
+                                    class="fas fa-copyright text-light me-2"></i>SOLAR SCHOOL</a>,
+                            All right
+                            reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-body">
+                        Designed By <a class="border-bottom text-primary" href="">DJSK TECH
+                            SOLUTIONS</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
 
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
 
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
 
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
 </body>
 
 </html>
