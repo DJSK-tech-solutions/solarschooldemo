@@ -31,6 +31,222 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Universal mobile styles */
+        @media screen and (max-width: 767px) {
+
+            /* Header and Navigation */
+            .navbar-brand h1 {
+                font-size: calc(14px + 0.5vw);
+                white-space: normal;
+                line-height: 1.2;
+            }
+
+            .navbar-brand img {
+                height: 25px !important;
+                width: 25px !important;
+            }
+
+            .navbar {
+                padding: 0.5rem !important;
+            }
+
+            .navbar-toggler {
+                padding: 4px 8px;
+                margin-right: 5px;
+            }
+
+            .navbar-collapse {
+                background: white;
+                padding: 1rem;
+                margin-top: 0.5rem;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .navbar-nav {
+                margin: 0;
+                padding: 0;
+            }
+
+            .nav-item {
+                width: 100%;
+                text-align: center;
+                margin: 5px 0;
+            }
+
+            .nav-link {
+                padding: 10px !important;
+                color: #000 !important;
+            }
+
+            /* Header Image */
+            .header-carousel-item-img img {
+                height: calc(250px + 10vw) !important;
+                min-height: 250px;
+            }
+
+            .header-carousel-item-img .container {
+                width: 90%;
+                max-width: none;
+            }
+
+            /* About Section */
+            .about .container {
+                padding: 1rem !important;
+            }
+
+            .about-img img {
+                height: auto;
+                margin-bottom: 1rem;
+            }
+
+            .display-4 {
+                font-size: calc(20px + 1.5vw);
+                margin-bottom: 0.5rem;
+            }
+
+            .display-5 {
+                font-size: calc(18px + 1vw);
+                margin-bottom: 1rem;
+            }
+
+            .text.ps-4 {
+                padding-left: 0.5rem !important;
+                font-size: calc(14px + 0.5vw);
+                text-align: justify;
+            }
+
+            /* Counter Boxes */
+            .counter-boxes .row {
+                margin: -0.5rem;
+            }
+
+            .col-sm-4 {
+                padding: 0.5rem;
+            }
+
+            .bg-primary.rounded,
+            .bg-dark.rounded {
+                padding: 0.75rem !important;
+                margin-bottom: 1rem;
+            }
+
+            .counter-value {
+                font-size: calc(20px + 1vw) !important;
+            }
+
+            .counter-boxes p {
+                font-size: calc(12px + 0.5vw);
+                margin: 0;
+            }
+
+            /* Footer */
+            .footer {
+                padding: 2rem 0 !important;
+            }
+
+            .footer-item {
+                text-align: center;
+                padding: 0 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .footer-item h4 {
+                font-size: calc(16px + 0.5vw);
+                margin-bottom: 1rem;
+            }
+
+            .footer-item a {
+                font-size: calc(12px + 0.5vw);
+                margin: 5px 0;
+                display: block;
+            }
+
+            /* Copyright */
+            .copyright {
+                padding: 1rem 0 !important;
+            }
+
+            .copyright .row>div {
+                text-align: center !important;
+                margin: 5px 0;
+            }
+
+            .copyright span,
+            .copyright a {
+                font-size: calc(12px + 0.3vw);
+            }
+        }
+
+        /* Small mobile devices (320px - 375px) */
+        @media screen and (max-width: 375px) {
+            .navbar-brand h1 {
+                font-size: 12px;
+            }
+
+            .counter-value {
+                font-size: 18px !important;
+            }
+        }
+
+        /* Medium mobile devices (376px - 480px) */
+        @media screen and (min-width: 376px) and (max-width: 480px) {
+            .navbar-brand h1 {
+                font-size: 14px;
+            }
+        }
+
+        /* Large mobile devices (481px - 767px) */
+        @media screen and (min-width: 481px) and (max-width: 767px) {
+            .navbar-brand h1 {
+                font-size: 16px;
+            }
+        }
+
+        /* Landscape orientation specific */
+        @media screen and (max-width: 767px) and (orientation: landscape) {
+            .header-carousel-item-img img {
+                height: 250px !important;
+            }
+
+            .row.g-4 {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .col-sm-4 {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+            }
+        }
+
+        /* Universal improvements */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .back-to-top {
+            bottom: 20px;
+            right: 20px;
+            padding: 8px;
+            font-size: 14px;
+            z-index: 999;
+        }
+
+        /* Fix for iOS devices */
+        input,
+        textarea {
+            -webkit-appearance: none;
+            border-radius: 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -147,8 +363,7 @@
                         <div class="col-sm-4">
                             <div class="bg-primary rounded p-4">
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value fs-1 fw-bold text-dark"
-                                        data-toggle="counter-up">3</span>
+                                    <span class="counter-value fs-1 fw-bold text-dark" data-toggle="counter-up">3</span>
                                     <h4 class="text-dark fs-1 mb-0" style="font-weight: 600; font-size: 25px;">k+</h4>
                                 </div>
                                 <div class="w-100 d-flex align-items-center justify-content-center">
