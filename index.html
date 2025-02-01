@@ -31,6 +31,222 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Carousel Base Styles */
+        .header-carousel.owl-carousel {
+            position: relative;
+        }
+
+        .header-carousel.owl-carousel .owl-nav {
+            display: none !important;
+        }
+
+        .header-carousel .header-carousel-item {
+            transition: all 0.3s ease;
+        }
+
+        .header-carousel .owl-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .header-carousel .owl-dot {
+            display: inline-block;
+            margin: 0 5px;
+        }
+
+        .header-carousel .owl-dot span {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .header-carousel .owl-dot.active span {
+            background: #fff;
+            transform: scale(1.2);
+        }
+
+        /* Mobile-specific styles */
+        @media only screen and (max-width: 767px) {
+
+            /* Navbar adjustments */
+            .navbar-brand h1 {
+                font-size: 14px;
+                line-height: 1.2;
+            }
+
+            .navbar-brand img {
+                height: 30px !important;
+                width: 30px !important;
+            }
+
+            .navbar {
+                padding: 10px !important;
+            }
+
+            .navbar-collapse {
+                background: #fff;
+                padding: 15px;
+                border-radius: 8px;
+                margin-top: 10px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-item {
+                text-align: center;
+                padding: 8px 0;
+            }
+
+            /* Carousel adjustments */
+            .header-carousel-item img {
+                height: 300px !important;
+                object-fit: cover;
+            }
+
+            .carousel-caption {
+                padding: 15px !important;
+                bottom: 0 !important;
+                background: rgba(0, 0, 0, 0.6);
+                width: 100%;
+                left: 0;
+                right: 0;
+            }
+
+            .carousel-caption h1 {
+                font-size: 24px !important;
+                margin-bottom: 10px !important;
+            }
+
+            .carousel-caption p {
+                font-size: 14px !important;
+                margin-bottom: 10px !important;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            /* About section */
+            .about .container {
+                padding: 20px !important;
+            }
+
+            .about-img img {
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .about h1 {
+                font-size: calc(24px + 1vw);
+            }
+
+            .about p {
+                font-size: 14px;
+                padding-left: 10px !important;
+            }
+
+            /* Counter section */
+            .counter-value {
+                font-size: 24px !important;
+            }
+
+            /* Facilities section */
+            .service .container {
+                padding: 20px !important;
+            }
+
+            .service-item {
+                margin-bottom: 20px;
+            }
+
+            .service-img img {
+                height: 200px !important;
+                object-fit: cover;
+            }
+
+            .service-content {
+                padding: 15px !important;
+            }
+
+            /* Events section */
+            .project .container {
+                padding: 20px !important;
+            }
+
+            .project-item {
+                margin-bottom: 20px;
+            }
+
+            .project-img img {
+                height: 200px !important;
+                object-fit: cover;
+            }
+
+            .project-content {
+                padding: 15px !important;
+            }
+
+            /* Footer */
+            .footer {
+                padding: 30px 0 !important;
+            }
+
+            .footer-item {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .footer-item a {
+                padding: 8px 0;
+                display: block;
+                font-size: 14px;
+            }
+        }
+
+        /* Extra small devices */
+        @media only screen and (max-width: 375px) {
+            .navbar-brand h1 {
+                font-size: 12px;
+            }
+
+            .carousel-caption h1 {
+                font-size: 20px !important;
+            }
+
+            .service-img img,
+            .project-img img {
+                height: 180px !important;
+            }
+        }
+
+        /* Landscape mode */
+        @media only screen and (max-width: 767px) and (orientation: landscape) {
+            .header-carousel-item img {
+                height: 250px !important;
+            }
+
+            .carousel-caption {
+                padding: 10px !important;
+            }
+
+            .service .row,
+            .project .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+    </style>
+
 </head>
 
 <body>
@@ -174,8 +390,7 @@
                         <div class="col-sm-4">
                             <div class="bg-primary rounded p-4">
                                 <div class="d-flex align-items-center justify-content-center">
-                                    <span class="counter-value fs-1 fw-bold text-dark"
-                                        data-toggle="counter-up">3</span>
+                                    <span class="counter-value fs-1 fw-bold text-dark" data-toggle="counter-up">3</span>
                                     <h4 class="text-dark fs-1 mb-0" style="font-weight: 600; font-size: 25px;">k+</h4>
                                 </div>
                                 <div class="w-100 d-flex align-items-center justify-content-center">
